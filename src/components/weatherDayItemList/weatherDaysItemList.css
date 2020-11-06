@@ -1,0 +1,9 @@
+.weatherDays__Container{
+    width: 80%;
+    border: 2px solid blue;
+    margin: 0 auto;
+}
+.weatherDays__list{
+    display: flex;
+    justify-content: center;
+}

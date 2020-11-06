@@ -1,0 +1,14 @@
+html {
+    background: url('zakat_derevo_ozero_130063_2560x1080.jpg') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+
+
+.container{
+    max-width: 90%;
+    margin: 0 auto;
+}
