@@ -15,6 +15,7 @@ const CurrentWeatherData = () => {
     const city = useSelector((state) => state.reCurrentWeather.currentWeather.city);
     const loader = useSelector((state) => state.reCurrentWeather.currentWeatherStatus.load);
     const error = useSelector((state) => state.reCurrentWeather.currentWeatherStatus.error);
+
     useEffect(() => {
         dispatch(getCurrentWeather())
     }, [])

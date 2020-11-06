@@ -1,23 +1,16 @@
-import React , {useEffect} from 'react'
+import React from 'react'
+import moment from "moment";
 import './weatherDayItem.css'
 
-const WeatherDayItem  = () => {
+const WeatherDayItem  = ({icon, temperatura, wind, time}) => {
 
-    useEffect(() => {
 
-        //const url = `http://api.openweathermap.org/data/2.5/forecast/hourly?q=Kiev&appid=11b3dfa1d2e40fc8786190fab4640d93`
-         const url = `http://api.openweathermap.org/data/2.5/forecast?q=Try&appid=11b3dfa1d2e40fc8786190fab4640d93`
-        fetch(url)
-            .then(res => res.json())
-            .then(data => {
-                console.log(data)})
-            .catch(err => {
-                console.log(err)
-            })
-    }, [])
     return(
         <div className="dayItem__block">
-
+           <div className="dayItem__time dayItem__text">{moment(time).format('HH:mm')}</div>
+            <img src= {`https://openweathermap.org/img/wn/${icon}@2x.png`} alt="" className="dayItem__img"/>
+            <div className="dayItem__temperature dayItem__text">{temperatura} &deg; C</div>
+            <div className="dayItem__wind dayItem__text">{wind.speed} m/s</div>
         </div>
     )
 }

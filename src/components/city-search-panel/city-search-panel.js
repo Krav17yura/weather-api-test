@@ -3,6 +3,7 @@ import './city-search-panel.css'
 import {useFormik} from "formik";
 import {useDispatch} from "react-redux";
 import {getCurrentWeather} from "../../redux/actions/acCurrentWeather";
+import {fetchCurrentDayWeather} from "../../redux/actions/acCurrentDayWeather";
 
 const validate = values => {
     const errors = {};
@@ -23,6 +24,7 @@ const dispatch = useDispatch()
         validate,
         onSubmit: value => {
             dispatch(getCurrentWeather(value.citySearchValue))
+            dispatch(fetchCurrentDayWeather(value.citySearchValue))
         }
     })
     return(

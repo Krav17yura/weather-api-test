@@ -11,6 +11,13 @@
     text-align: center;
     box-sizing: border-box;
 }
+
+@media (max-width: 840px) {
+    .currentWeather__container{
+        height: 720px;
+        margin-bottom: 20px;
+    }
+}
 .currentWeather__title{
     font-family: Bahnschrift, serif;
     text-align: center;
@@ -44,9 +51,9 @@
 }
 
 .infoBlock{
-    border: 2px solid red;
-    margin-bottom: 100px;
+    margin-bottom: 50px;
 }
+
 
 
 

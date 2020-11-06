@@ -30,6 +30,7 @@ export const getCurrentWeather = (city = "Kiev") => dispatch => {
         .then(data => {
             dispatch(setCurrentWeather(data))
             dispatch(setIsLoad(true))
+            dispatch(setError(true))
         })
         .catch(err => {
             console.log(err);
